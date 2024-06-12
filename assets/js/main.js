@@ -14,7 +14,7 @@ class Draw {
 
     static updatePage(){
         document.getElementById("fortuneText").innerHTML = this.currentFortune;
-        document.getElementById("fortuneBox").style.display = "block"
+        document.getElementById("fortuneBox").style.display = "flex";
         document.getElementById("copy").style.display = "block";
         document.getElementById("copied").style.display = "none";
         document.getElementById("copiedTxt").style.display ="none";

@@ -3,11 +3,16 @@
 * {
 
    font-family: 'Nunito', sans-serif;
+   
 }
 html {
     scroll-behavior: smooth;
 }
-
+body{
+    background-image: url('/assets/img/background.webp');
+    background-size: 100%;
+    filter: blur(px);
+}
 .customBttn{
     all: unset;
    
@@ -24,6 +29,8 @@ html {
 }
 #copy{
     display: none;
+    margin-left: 20px;
+    margin: 6.5px;
 }
 
 #copiedWrapper{
@@ -37,11 +44,15 @@ html {
 }
 #copiedTxt {
     display: none;
+    margin-left: 20px;
+    padding: 10px;
+    border-radius: 3px;
+    border: solid black 2px;
 }
 
 #drawFortuneButton{
    font-size: xx-large;
-
+    margin: 15px;
 }
 #fortuneButtonWrapper{
     display: flex;
@@ -49,7 +60,13 @@ html {
 }
 #fortuneBox{
     display: none;
-    border: 2px solid grey;
-    margin: 5px;
-    padding: 5px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border: 2px solid #afa6a6;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #222020;
+    color: #ece5e5;
+    
 }
