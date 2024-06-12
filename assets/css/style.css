@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+
+   font-family: 'Nunito', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+.customBttn{
+    all: unset;
+   
+}
+.customBttn img{
+    all: unset;
+    margin-bottom: -5px;
+}
+#copy:hover{
+    filter: brightness(50%);
+}
+#copy:active{
+    filter: brightness(30%);
+}
+#copy{
+    display: none;
+}
+
+#copiedWrapper{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#copied{
+    display: none;
+}
+#copiedTxt {
+    display: none;
+}
+
+#drawFortuneButton{
+   font-size: xx-large;
+
+}
+#fortuneButtonWrapper{
+    display: flex;
+    justify-content: center;
+}
+#fortuneBox{
+    display: none;
+    border: 2px solid grey;
+    margin: 5px;
+    padding: 5px;
+}
