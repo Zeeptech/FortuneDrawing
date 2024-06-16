@@ -3,19 +3,41 @@
 * {
 
    font-family: 'Nunito', sans-serif;
-   
+   font-size: large;
 }
 html {
     scroll-behavior: smooth;
 }
 body{
+    position: relative;
+    margin: 0;
+    height: 100vh;
+
+}
+
+#blur {
     background-image: url('/assets/img/background.webp');
-    background-size: 100%;
-    filter: blur(px);
+    background-size:cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter:blur(4px);
+    width: 100%;
+    height: 100%;
+}
+main {
+    
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+#content{
+    position: relative;
+    z-index: 2;
 }
 .customBttn{
     all: unset;
-   
 }
 .customBttn img{
     all: unset;
@@ -27,27 +49,34 @@ body{
 #copy:active{
     filter: brightness(30%);
 }
-#copy{
-    display: none;
-    margin-left: 20px;
-    margin: 6.5px;
-}
+#copyWrapper{
+    
 
+}
+#copy{
+    
+}
+#copyWrapper img, #copiedWrapper img {
+    overflow: hidden;
+}
 #copiedWrapper{
-    display: flex;
+    display: none;
     align-items: center;
     gap: 10px;
 }
 
 #copied{
-    display: none;
+    
 }
 #copiedTxt {
+    position: absolute;
     display: none;
-    margin-left: 20px;
+    margin-top:-6.5px;
+    margin-left: -80px;
+    background-color: rgb(26, 143, 98);
     padding: 10px;
-    border-radius: 3px;
-    border: solid black 2px;
+    border-radius: 7px;
+    
 }
 
 #drawFortuneButton{
@@ -58,15 +87,20 @@ body{
     display: flex;
     justify-content: center;
 }
+
+
+#fortuneWrapper {
+    display: grid;
+    justify-content: center;
+    width: 50%;
+}
+
 #fortuneBox{
     display: none;
     justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    border: 2px solid #afa6a6;
+    align-content: center;
     padding: 10px;
     box-sizing: border-box;
-    background-color: #222020;
-    color: #ece5e5;
-    
+    color: #e7dfdf;
+    background-color: #292828;
 }

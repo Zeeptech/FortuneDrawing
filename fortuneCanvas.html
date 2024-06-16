@@ -3,37 +3,37 @@
     <head>
         <meta charset="UTF-8">
         <title>Fortune Drawer</title>
+        <link rel="icon" href="/assets/img/fortune-cookie.png" type="image/x-icon">
         <script src="assets/js/main.js" type="module"></script>
         <link rel="stylesheet" href="assets/css/style.css">
     </head>
     <body>
-        <header>
-            <nav id="fortuneButtonWrapper">
-                <button id="drawFortuneButton">Draw a Fortune</button>
-            </nav>
-            <section id="fortuneBox">
-                <article id="fortuneText">
+        <div id="content">
+            <header>
+                <nav id="fortuneButtonWrapper">
+                    <button id="drawFortuneButton">Draw a Fortune</button>
+                </nav>
+            </header>   
+            <main>
+                <section id="fortuneWrapper">
+                    <section id="fortuneBox">
+                        <article id="fortuneText">
 
-                </article>
-                <article id="copyKnapp">
-                    <button class="customBttn" title="Copy" id="copy"><img src="assets/img/copy.png"></button>
-
-                <article id="copiedWrapper">
-                    <span id="copiedTxt">Copied</span>
-                    <button class="customBttn" title="Copied" id="copied"><img src="assets/img/checked.png"></button>
-                    
-                </article>  
-            </section>
-            <section>
-                
-                 </article>
-            </section>
-        </header>
-        <main>
-
-        </main>
-        <footer>
-
-        </footer>
+                        </article>
+                        <article id="copyWrapper">
+                            <button class="customBttn" title="Copy" id="copy"><img src="assets/img/copy.png"></button>
+                        </article>
+                        <article id="copiedWrapper">
+                            <span id="copiedTxt">Copied</span>
+                            <button class="customBttn" title="Copied" id="copied"><img src="assets/img/checked.png"></button>
+                        </article>  
+                    </section>
+                </section>   
+            </main>
+        
+            <footer>
+            </footer>
+         </div> 
+    <div id="blur"></div>
     </body>
 </html>

@@ -15,8 +15,8 @@ class Draw {
     static updatePage(){
         document.getElementById("fortuneText").innerHTML = this.currentFortune;
         document.getElementById("fortuneBox").style.display = "flex";
-        document.getElementById("copy").style.display = "block";
-        document.getElementById("copied").style.display = "none";
+        document.getElementById("copyWrapper").style.display = "block";
+        document.getElementById("copiedWrapper").style.display = "none";
         document.getElementById("copiedTxt").style.display ="none";
 
     }
@@ -39,10 +39,15 @@ class Draw {
     }
 
     static changeBttn() {
-        document.getElementById("copy").style.display = "none";
-        document.getElementById("copied").style.display = "block";
+        document.getElementById("copyWrapper").style.display = "none";
+        document.getElementById("copiedWrapper").style.display = "block";
         document.getElementById("copiedTxt").style.display ="block";
         navigator.clipboard.writeText(this.currentFortune);
+        setTimeout(() => {
+            document.getElementById("copyWrapper").style.display = "block";
+            document.getElementById("copiedWrapper").style.display = "none";
+            document.getElementById("copiedTxt").style.display ="none";
+        }, 1000);
     }
 
 }
