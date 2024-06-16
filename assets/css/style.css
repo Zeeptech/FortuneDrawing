@@ -51,13 +51,6 @@ main {
 #copy:active{
     filter: brightness(30%);
 }
-#copyWrapper{
-    
-
-}
-#copy{
-    
-}
 
 #copiedWrapper{
     display: none;
@@ -65,9 +58,6 @@ main {
     gap: 10px;
 }
 
-#copied{
-    
-}
 #copiedTxt {
     position: absolute;
     display: none;
