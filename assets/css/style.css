@@ -29,7 +29,6 @@ body{
     
 }
 main {
-    
     display: flex;
     justify-content: center;
     padding-top: 100px;
@@ -93,4 +92,7 @@ main {
     box-sizing: border-box;
     color: #e7dfdf;
     background-color: #292828;
+}
+#content img, #content video, #content canvas {
+    overflow: hidden;
 }
