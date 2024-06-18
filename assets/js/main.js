@@ -6,19 +6,35 @@ class Draw {
     static currentFortune;
     static prvFortune;
     static fortuneArrayIndex = 0;
+    static showCookie = true;
 
     static init(){
         document.getElementById("drawFortuneButton").addEventListener("click", this.drawFortune.bind(this));
         document.getElementById("copy").addEventListener("click",this.changeBttn.bind(this));
     }
 
-    static updatePage(){
+    static updatePage(){    // Animerar Kak-Knäck
+       
+        if (this.showCookie == true){
+            
+            document.getElementById("cookieLeft").style.animation ="cookieLeft 1000ms"; 
+            document.getElementById("cookieRight").style.animation ="cookieRight 1000ms";
+                setTimeout(() => {
+                    document.getElementById("cookie").style.display = "none"; 
+                    document.getElementById("fortuneText").innerHTML = this.currentFortune;
+                    document.getElementById("fortuneBox").style.display = "flex";
+                    document.getElementById("copyWrapper").style.display = "block";
+            }, 750);
+            this.showCookie = false;
+        } 
+        //Displayar FortuneText,box och wrapper
         document.getElementById("fortuneText").innerHTML = this.currentFortune;
-        document.getElementById("fortuneBox").style.display = "flex";
         document.getElementById("copyWrapper").style.display = "block";
+        // Gömmer CopiedWrapper och copiedText
         document.getElementById("copiedWrapper").style.display = "none";
         document.getElementById("copiedTxt").style.display ="none";
-
+        
+ 
     }
 
     static drawFortune() {

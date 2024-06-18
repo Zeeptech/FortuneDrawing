@@ -11,31 +11,33 @@ html {
 body{
     position: relative;
     margin: 0;
-    height: 100vh;
+    background-color: #292828;
 
-
+}
+main{
+    overflow: hidden;
+    
 }
 
 #blur {
     background-image: url('../img/background.webp');
     background-size:cover;
     background-repeat: no-repeat;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     filter:blur(4px);
     width: 100%;
     height: 100%;
     
-}
-main {
-    display: flex;
-    justify-content: center;
-    padding-top: 100px;
-}
+} 
+
 #content{
+    display: grid;
+    grid-template-rows: auto 1fr;
     position: relative;
     z-index: 2;
+    height: 100vh;
 }
 .customBttn{
     all: unset;
@@ -60,12 +62,13 @@ main {
 #copiedTxt {
     position: absolute;
     display: none;
-    margin-top:-6.5px;
+    margin-top:-0px;
     margin-left: -80px;
     background-color: rgb(26, 143, 98);
     padding: 10px;
     border-radius: 7px;
-    
+    font-size: 16px;
+    animation: slideIn 1100ms;
 }
 
 #drawFortuneButton{
@@ -79,9 +82,12 @@ main {
 
 
 #fortuneWrapper {
-    display: grid;
+    display: flex;
+    align-items: start;
     justify-content: center;
-    width: 50%;
+    overflow: hidden;
+    max-height: 100%;
+ 
 }
 
 #fortuneBox{
@@ -91,8 +97,79 @@ main {
     padding: 10px;
     box-sizing: border-box;
     color: #e7dfdf;
-    background-color: #292828;
+    background-color: #292828; 
+    width: 50%;
+    max-height: 100%;
+    overflow-y: auto;
+    animation: slideUp 1000ms;
 }
 #content img, #content video, #content canvas {
     overflow: hidden;
+}
+#cookie{
+    display: flex;
+    justify-content:center;
+    align-items: end;
+    width: 100%;
+    
+}
+
+#cookieLeft{
+    left:0;
+    
+}
+#cookieRight{
+    margin-bottom: 3px;
+    
+}
+@keyframes slideUp{
+    from{
+        opacity: 0;
+        margin-top:150px;
+    }
+    
+}
+@keyframes slideIn{
+    0%{
+        margin-left:-30px;
+        opacity: 1 ;
+    }
+ 
+    75%{
+        margin-left: -80px;
+        opacity: 1;
+        
+        
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes cookieLeft{
+
+    75%{
+        transform: rotate(-15deg);
+        margin-right:200px;
+    
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes cookieRight{
+    75%{
+        transform: rotate(15deg);
+        margin-left:200px;
+        
+        
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@media only screen and (max-width: 800px) {
+    #fortuneBox{
+        margin:15px;
+        width:100%;
+    }
 }
